@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Page</title>
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="stylesShop.css">
 </head>
 <body>
-    <h1>Welcome, <span id="welcome-back"></span>!</h1>
+    <div class="container">
+        <h1>Pokédex</h1>
+        <input type="text" id="search" placeholder="Search Pokémon..." onkeypress="onEnter(event)" >
+        <select id="type-filter">
+            <option value="all">All Types</option>
+            <!-- Pokémon types will be dynamically inserted here -->
+        </select>
+        <h1>Welcome, <span id="welcome-back"></span>!</h1>
+        <div id="pokemon-list" class="grid"></div>
 
     <script>
         const loggedInUser = localStorage.getItem('loggedInUser');
@@ -16,5 +25,8 @@
         }
 
     </script>
+    </div>
+    
+    <script src="shop.js"></script>
 </body>
 </html>
