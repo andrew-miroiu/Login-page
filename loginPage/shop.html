@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page</title>
+</head>
+<body>
+    <h1>Welcome, <span id="welcome-back"></span>!</h1>
+
+    <script>
+        const loggedInUser = localStorage.getItem('loggedInUser');
+
+        if (loggedInUser) {
+            document.getElementById('welcome-back').innerHTML = loggedInUser;
+        }
+
+    </script>
+</body>
+</html>
